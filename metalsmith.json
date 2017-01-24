@@ -11,7 +11,7 @@
       },
       "gh-pages": {
         "site": {
-          "baseUrl": "/elements"
+          "baseUrl": ""
         }
       }
     },
