@@ -53,10 +53,23 @@ Please review the [guidelines](https://github.com/Pearson-Higher-Ed/docs/blob/ma
 You must have [Node.js](https://nodejs.org/en/) v5 installed.
 
 Clone the project and install the dependencies:
+```sh
+$ git clone https://github.com/Pearson-Higher-Ed/elements.git
+$ cd elements
+$ npm install
+```
 
-    git clone https://github.com/Pearson-Higher-Ed/elements.git
-    cd elements
-    npm install
+### Commit Message Guidelines
+This repository strictly uses [commit message conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit). Therefore please follow the following commands.
+```sh
+// npm users
+$ git add example.txt
+$ npm run commit
+
+// yarn users
+$ git add example.txt
+$ yarn commit
+```
 
 ### Adding Icons
 
