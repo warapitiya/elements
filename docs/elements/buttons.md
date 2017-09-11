@@ -10,8 +10,8 @@ Use a button to represent a user action&#8212; specifically, pressing it should 
 
 {{#demo}}
 <button class="pe-btn">Default</button>
-<button class="pe-btn__cta">Call To Action</button>
-<button class="pe-btn__primary--btn_xlarge">Primary</button>
+<button class="pe-btn pe-btn-cta">Call To Action</button>
+<button class="pe-btn pe-btn-primary pe-btn-xl">Primary</button>
 {{/demo}}
 
 ## Elements
@@ -21,12 +21,11 @@ Button classes can be used with `<div>`, `<span>`, `<a>`, `<button>`, and `<inpu
 {{#demo}}
 <div class="pe-btn" tabindex="0" role="button">Div</div>
 <a href="#void" class="pe-btn" role="button">Link</a>
-<a href="#void" class="pe-btn__primary--btn_xlarge" role="button">Large Primary Link</a>
+<a href="#void" class="pe-btn pe-btn-primary pe-btn-xl" role="button">Large Primary Link</a>
 <button type="button" class="pe-btn">Button</button>
 <input class="pe-btn" type="submit" value="Submit">
-<button type="button" class="pe-link">Button</button>
-<button type="button" class="pe-link--btn">Link button 2.0</button>
-<button type="button" class="pe-link--btn" disabled>Disabled link button 2.0</button>
+<button type="button" class="pe-btn-link">Link button 2.0</button>
+<button type="button" class="pe-btn-link" disabled>Disabled link button 2.0</button>
 {{/demo}}
 
 <aside>
@@ -45,10 +44,10 @@ Buttons can be disabled when an action is not available to the user for the curr
 <button class="pe-btn" disabled>Default</button>
 {{/demo}}
 
-For elements that do not support the `disabled` attribute, use `pe-btn--disabled` and `aria-disabled`.
+For elements that do not support the `disabled` attribute, use `pe-btn-disabled` and `aria-disabled`.
 
 {{#demo}}
-<div class="pe-btn pe-btn--disabled" aria-disabled="true">Not a button</div>
+<div class="pe-btn pe-btn-disabled" aria-disabled="true">Not a button</div>
 {{/demo}}
 
 ## Sizes
@@ -56,9 +55,9 @@ For elements that do not support the `disabled` attribute, use `pe-btn--disabled
 Buttons can be made smaller or larger.
 
 {{#demo}}
-<button class="pe-btn--btn_small">Small</button>
-<button class="pe-btn__cta--btn_large">CTA Large</button>
-<button class="pe-btn__primary--btn_xlarge">Primary xLarge</button>
+<button class="pe-btn">Small</button>
+<button class="pe-btn pe-btn-cta pe-btn-lg">CTA Large</button>
+<button class="pe-btn pe-btn-primary pe-btn-xl">Primary xLarge</button>
 {{/demo}}
 
 ## Text overflow
@@ -84,12 +83,12 @@ When the width of the button's text exceeds the container width, it will be trun
   pe_ajax.send();
 }</script>
 
-Some buttons, such as "close" buttons or accordion toggles (so-called UI buttons) may in the design not match any of the above content buttons, but may only contain an icon (see <a href="../icons">icons documentation</a>). The class `pe-icon--btn` removes default button styles such as padding or border, allowing the icon alone to represent the control.
+Some buttons, such as "close" buttons or accordion toggles (so-called UI buttons) may in the design not match any of the above content buttons, but may only contain an icon (see <a href="../icons">icons documentation</a>). The class `pe-btn-icon` removes default button styles such as padding or border, allowing the icon alone to represent the control.
 
 Keep in mind that with just a loose icon, the context needs to make it clear to users that the icon represents a control rather than a decoration.
 
 {{#demo}}
-<button type="button" class="pe-icon--btn">
+<button type="button" class="pe-btn-icon">
   <svg role="img"
        aria-labelledby="b1"
        focusable="false"
@@ -105,7 +104,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
 
 {{#demo}}
 <p>With size-18 icon:</p>
-<button type="button" class="pe-btn--btn_small" aria-label="Start date">
+<button type="button" class="pe-btn" aria-label="Start date">
   Small with icon
   <svg aria-hidden="true"
        focusable="false"
@@ -113,7 +112,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
     <use xlink:href="#calendar-18"></use>
   </svg>
 </button>
-<button type="button" class="pe-btn--btn_large pe-btn__cta" aria-label="End date">
+<button type="button" class="pe-btn pe-btn-lg pe-btn-cta" aria-label="End date">
   CTA large with icon
   <svg aria-hidden="true"
        focusable="false"
@@ -121,7 +120,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
     <use xlink:href="#calendar-18"></use>
   </svg>
 </button>
-<button type="button" class="pe-btn__primary--btn_xlarge" aria-label="Start date">
+<button type="button" class="pe-btn pe-btn-primary pe-btn-xl" aria-label="Start date">
   Primary xLarge with icon
   <svg aria-hidden="true"
        focusable="false"
@@ -131,7 +130,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
 </button>
 
 <p>With size-24 icon:</p>
-<button type="button" class="pe-btn--btn_small" aria-label="End date">
+<button type="button" class="pe-btn" aria-label="End date">
   Small with icon
   <svg aria-hidden="true"
        focusable="false"
@@ -139,7 +138,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
     <use xlink:href="#calendar-24"></use>
   </svg>
 </button>
-<button type="button" class="pe-btn--btn_large pe-btn__cta" aria-label="Start date">
+<button type="button" class="pe-btn pe-btn-lg pe-btn-cta" aria-label="Start date">
   CTA large with icon
   <svg aria-hidden="true"
        focusable="false"
@@ -147,7 +146,7 @@ Keep in mind that with just a loose icon, the context needs to make it clear to 
     <use xlink:href="#calendar-24"></use>
   </svg>
 </button>
-<button type="button" class="pe-btn__primary--btn_xlarge" aria-label="End date">
+<button type="button" class="pe-btn pe-btn-primary pe-btn-xl" aria-label="End date">
   Primary xLarge with icon
   <svg aria-hidden="true"
        focusable="false"
